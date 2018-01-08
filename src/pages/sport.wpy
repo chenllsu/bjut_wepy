@@ -1,0 +1,8 @@
+<template>
+	
+</template>
+<style></style>
+<script>
+	import wepy from 'wepy'
+	export default class sport extends wepy.page{}
+</script>
