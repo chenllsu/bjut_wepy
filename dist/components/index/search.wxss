@@ -1,0 +1,29 @@
+
+.search-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	width: 100%;
+	z-index: 1;
+	transition: background-color .5s;
+	background-color: white;
+}
+.search-button {
+	display: inline-block;
+	margin: 0 auto;
+	height: 30px;
+	width: 70%;
+	border-radius: 5px;
+	background-color: whitesmoke;
+	font-size: 13px;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: top;
+}
+.search-wrapper-blue {
+	background-color: #1296db;
+}
+.side-list-white{
+	color: white;
+}
