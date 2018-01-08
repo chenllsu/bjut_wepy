@@ -9,6 +9,15 @@
 	transition: background-color .5s;
 	background-color: white;
 }
+.side-list{
+  display: inline-block;
+  margin: 0 5vw;
+  height: 30px;
+  width: 30px;
+  font-size: 25px;
+  color: #1296db;
+  transition: color .5s;
+}
 .search-button {
 	display: inline-block;
 	margin: 0 auto;

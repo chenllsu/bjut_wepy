@@ -1,9 +1,43 @@
 
-  
+  <view style="height:100%;">
+    <!-- 搜索栏 -->
+    
 	<view class="search-wrapper {{$search$show_search_back?'search-wrapper-blue':''}}">
-		<view class="side-list iconfont icon-list {{$search$show_search_back?'side-list-white':''}}" bindtap="$search$open_side_list"/>
+		<!-- 侧边栏按钮 -->
+		<view class=" iconfont icon-list side-list {{$search$show_search_back?'side-list-white':''}}" bindtap="$search$open_side_list"/>
+		<!-- 搜索框 -->
 		<view class="search-button" bindtap="$search$click_search">
 			<view class="iconfont icon-sousuo"/>
 			搜索活动
 		</view>
 	</view>
+
+    
+	<view class="side-list-wrapper {{!$SideList$OpenSideList?'':'side-list-wrapper-show'}}">
+		<view class="list-item" bindtap="$SideList$click_side_item" data-wpyclick_side_item-a="1">
+			<view class="iconfont icon-act"/>
+			<text>学生活动{{$SideList$OpenSideList}}</text>
+		</view>
+		<view class="list-item" bindtap="$SideList$click_side_item" data-wpyclick_side_item-a="2">
+			<view class="iconfont icon-run"/>
+			<text>运动达人</text>
+		</view>
+		<view class="list-item" bindtap="$SideList$click_side_item" data-wpyclick_side_item-a="3">
+			<view class="iconfont icon-trainee"/>
+			<text>实习信息</text>
+		</view>
+		<view class="botton-item1" bindtap="$SideList$click_side_item" data-wpyclick_side_item-a="7">
+			<view class="iconfont icon-setting"/>
+			<text>设置</text>
+		</view>
+		<view class="botton-item2" bindtap="$SideList$click_side_item" data-wpyclick_side_item-a="5">
+			<view class="iconfont icon-connect"/>
+			<text>联系我们</text>
+		</view>
+		<view class="botton-item3" bindtap="$SideList$click_side_item" data-wpyclick_side_item-a="6">
+			<view class="iconfont icon-about"/>
+			<text>关于我们</text>
+		</view>
+	</view>
+
+  </view>

@@ -9,6 +9,15 @@
 	transition: background-color .5s;
 	background-color: white;
 }
+.side-list{
+  display: inline-block;
+  margin: 0 5vw;
+  height: 30px;
+  width: 30px;
+  font-size: 25px;
+  color: #1296db;
+  transition: color .5s;
+}
 .search-button {
 	display: inline-block;
 	margin: 0 auto;
@@ -31,7 +40,9 @@
 
 <template>
 	<view class="search-wrapper {{show_search_back?'search-wrapper-blue':''}}">
-		<view class="side-list iconfont icon-list {{show_search_back?'side-list-white':''}}" bindtap="open_side_list"></view>
+		<!-- 侧边栏按钮 -->
+		<view class=" iconfont icon-list side-list {{show_search_back?'side-list-white':''}}" bindtap="open_side_list"></view>
+		<!-- 搜索框 -->
 		<view class="search-button" bindtap="click_search">
 			<view class="iconfont icon-sousuo"></view>
 			搜索活动
@@ -40,20 +51,30 @@
 </template>
 
 <script>
-import wepy from 'wepy';
-export default class search extends wepy.page {
+import wepy from 'wepy'
+export default class search extends wepy.component {
 	data = {
+		// chenlong: 'cjhe'
 	}
 	props = {
-		testprop: String
-	};
+		// 点击侧边栏触发按钮标志
+		OpenSideList: {
+			type: Boolean,
+        	default: false
+		}
+	}
 	computed = {
 	}
 
 	methods = {
-		open_side_list: function(){
-			console.log('click open side-list...', this.testprop);
-			this.$emit('test', 'chenlong');
+		// 点击侧边栏按钮
+		open_side_list: () =>{
+			this.OpenSideList = !this.OpenSideList
+			this.$emit('change_sidelist_button', this.OpenSideList);
+		},
+		click_search: () => {
+			console.log('click click_search');
+			this.$root.$navigate({url: 'search'});
 		}
 	}
 
@@ -62,7 +83,7 @@ export default class search extends wepy.page {
 	}
 
 	onLoad() {
-		console.log('this is search props:', this.testprop);
+		
 	}
 }
 </script>

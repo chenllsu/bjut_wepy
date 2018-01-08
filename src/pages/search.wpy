@@ -1,0 +1,10 @@
+<style></style>
+<template>
+	123
+</template>
+<script>
+	import wepy from 'wepy'
+	export default class search extends wepy.page {
+		data = {}
+	}
+</script>

@@ -16,7 +16,8 @@ import 'wepy-async-function'
 export default class extends wepy.app {
   config = {
     pages: [
-      'pages/index'
+      'pages/index',
+      'pages/Search'
     ],
     window: {
       "backgroundTextStyle": "light",
@@ -70,8 +71,8 @@ export default class extends wepy.app {
   }
 
   async testAsync () {
-    const data = await this.sleep(3)
-    console.log(data)
+    // const data = await this.sleep(3)
+    // console.log(data)
   }
 
   getUserInfo(cb) {

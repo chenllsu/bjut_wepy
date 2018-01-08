@@ -1,0 +1,117 @@
+<style>
+.side-list-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40vw;
+	height: 100%;
+	margin-top: 50px;
+	overflow: hidden;
+	background-color: #1296db;
+	color: white;
+	transform: translate(-40vw,0);
+	z-index: 1000;
+	transition: transform .5s;
+}
+.side-list-wrapper-show {
+	transform: translate(0vw,0);
+}
+.side-list{
+	display: inline-block;
+	margin: 0 5vw;
+	height: 30px;
+	width: 30px;
+	font-size: 25px;
+	color: #1296db;
+	transition: color .5s;
+}
+.side-list-white{
+	color: white;
+}
+.list-item{
+	margin-top: 5vw;
+	margin-left: 5vw;
+}
+.botton-item1{
+	position: absolute;
+	bottom: 25vw;
+	left: 5vw;
+	font-size: 4vw;
+}
+.botton-item2{
+	position: absolute;
+	bottom: 15vw;
+	left: 5vw;
+	font-size: 4vw;
+}
+.botton-item3{
+	position: absolute;
+	bottom: 5vw;
+	left: 5vw;
+	font-size: 4vw;
+}
+</style>
+<template>
+	<view class="side-list-wrapper {{!OpenSideList?'':'side-list-wrapper-show'}}">
+		<view class="list-item" bindtap="click_side_item(1)">
+			<view class="iconfont icon-act"></view>
+			<text>学生活动{{OpenSideList}}</text>
+		</view>
+		<view class="list-item" bindtap="click_side_item(2)">
+			<view class="iconfont icon-run"></view>
+			<text>运动达人</text>
+		</view>
+		<view class="list-item" bindtap="click_side_item(3)">
+			<view class="iconfont icon-trainee"></view>
+			<text>实习信息</text>
+		</view>
+		<view class="botton-item1" bindtap="click_side_item(7)">
+			<view class="iconfont icon-setting"></view>
+			<text>设置</text>
+		</view>
+		<view class="botton-item2" bindtap="click_side_item(5)">
+			<view class="iconfont icon-connect"></view>
+			<text>联系我们</text>
+		</view>
+		<view class="botton-item3" bindtap="click_side_item(6)">
+			<view class="iconfont icon-about"></view>
+			<text>关于我们</text>
+		</view>
+	</view>
+</template>
+<script>
+import wepy from 'wepy'
+export default class SideList extends wepy.component {
+	data = {}
+	props = {
+		// 点击侧边栏触发按钮标志
+		OpenSideList: {
+			type: Boolean,
+			default: false
+		}
+	}
+	watch = {
+		OpenSideList (newValue, oldValue) {
+			console.log(`num value: ${oldValue} -> ${newValue}`)
+		}
+	}
+	methods = {
+		click_side_item: (key) => {
+			var _this = this;
+			switch(key) {
+				case '1':
+					console.log('this is hahah');
+					_this.OpenSideList = false
+					_this.$emit('close_side_list', 0)
+					break;
+				case '2':
+					
+					break;
+			}
+		}
+	}
+	onLoad(){
+		console.log('asdfhkalsdf');
+	}
+}
+</script>
