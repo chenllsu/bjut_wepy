@@ -1,7 +1,12 @@
+@import "./../components/index/swiper.wxss";
 @import "./../components/index/SideList.wxss";
 @import "./../components/index/search.wxss";
 
 @import '/font.wxss';
 page{
   height: 100%;
+}
+scroll-view {
+  height: 100%;
+  width: 100%;
 }

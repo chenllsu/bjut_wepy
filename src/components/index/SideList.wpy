@@ -55,7 +55,7 @@
 	<view class="side-list-wrapper {{!OpenSideList?'':'side-list-wrapper-show'}}">
 		<view class="list-item" bindtap="click_side_item(1)">
 			<view class="iconfont icon-act"></view>
-			<text>学生活动{{OpenSideList}}</text>
+			<text>学生活动</text>
 		</view>
 		<view class="list-item" bindtap="click_side_item(2)">
 			<view class="iconfont icon-run"></view>
@@ -91,9 +91,6 @@ export default class SideList extends wepy.component {
 		}
 	}
 	watch = {
-		OpenSideList (newValue, oldValue) {
-			console.log(`num value: ${oldValue} -> ${newValue}`)
-		}
 	}
 	methods = {
 		click_side_item: (key) => {

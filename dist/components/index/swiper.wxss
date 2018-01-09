@@ -1,0 +1,7 @@
+
+	.swiper-wrapper {
+		width: 100vw;
+		height: 400vw;
+		margin-top: 50px;
+		background-color: red;
+	}

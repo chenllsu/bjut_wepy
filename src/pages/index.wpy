@@ -3,12 +3,19 @@
 page{
   height: 100%;
 }
+scroll-view {
+  height: 100%;
+  width: 100%;
+}
 </style>
 <template>
   <view style='height:100%;'>
     <!-- 搜索栏 -->
     <search :OpenSideList.sync='open'></search>
     <SideList :OpenSideList.sync='open'></SideList>
+    <scroll-view scroll-y="true" bindscrolltoupper="reach_top">
+      <swiper></swiper>
+    </scroll-view>
   </view>
 </template>
 
@@ -16,6 +23,7 @@ page{
 import wepy from 'wepy'
 import search from '../components/index/search'
 import sidelist from '../components/index/SideList'
+import swiper from '../components/index/swiper'
 
 export default class Index extends wepy.page {
   config = {
@@ -23,7 +31,8 @@ export default class Index extends wepy.page {
   }
   components = {
     search: search,
-    SideList: sidelist
+    SideList: sidelist,
+    swiper: swiper
   }
 
   data = {
@@ -43,7 +52,11 @@ export default class Index extends wepy.page {
     }
 
     methods = {
+      reach_top: () => {
+        console.log('test');
+      }
     }
+
     // events对象中所声明的函数为用于监听组件之间的通信与交互事件的事件处理函数
     events = {
       'change_sidelist_button': (open_mark) => {
