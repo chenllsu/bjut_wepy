@@ -11,9 +11,9 @@ scroll-view {
 <template>
   <view style='height:100%;'>
     <!-- 搜索栏 -->
-    <search :OpenSideList.sync='open'></search>
+    <search :OpenSideList.sync='open' :ShowSearchBack.sync='show_search_back'></search>
     <SideList :OpenSideList.sync='open'></SideList>
-    <scroll-view scroll-y="true" bindscrolltoupper="reach_top">
+    <scroll-view scroll-y="true" bindscrolltoupper="reach_top" bindscroll='bindscroll'>
       <swiper></swiper>
     </scroll-view>
   </view>
@@ -52,15 +52,30 @@ export default class Index extends wepy.page {
     }
 
     methods = {
+      // 到达顶部时的相应函数
       reach_top: () => {
-        console.log('test');
-      }
+        this.show_search_back = false
+        this.$apply()
+      },
+      // 监听屏幕滚动
+      bindscroll: function (e) {
+        console.log(e.detail.scrollTop)
+        if (e.detail.scrollTop > 10) {
+          console.log('hahah')
+          this.show_search_back = true
+          this.$apply()
+        } else {
+          this.show_search_back = false
+          this.$apply()
+        }
+      },
     }
 
     // events对象中所声明的函数为用于监听组件之间的通信与交互事件的事件处理函数
     events = {
       'change_sidelist_button': (open_mark) => {
         this.open = open_mark
+        this.apply()
       },
       'close_side_list': (a) => {
         console.log('close side list');

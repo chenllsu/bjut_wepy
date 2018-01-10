@@ -19,25 +19,29 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var search = function (_wepy$component) {
-	_inherits(search, _wepy$component);
+var Search = function (_wepy$component) {
+	_inherits(Search, _wepy$component);
 
-	function search() {
+	function Search() {
 		var _ref;
 
 		var _temp, _this, _ret;
 
-		_classCallCheck(this, search);
+		_classCallCheck(this, Search);
 
 		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 			args[_key] = arguments[_key];
 		}
 
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = search.__proto__ || Object.getPrototypeOf(search)).call.apply(_ref, [this].concat(args))), _this), _this.data = {
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Search.__proto__ || Object.getPrototypeOf(Search)).call.apply(_ref, [this].concat(args))), _this), _this.data = {
 			// chenlong: 'cjhe'
 		}, _this.props = {
 			// 点击侧边栏触发按钮标志
 			OpenSideList: {
+				type: Boolean,
+				default: false
+			},
+			ShowSearchBack: {
 				type: Boolean,
 				default: false
 			}
@@ -54,13 +58,13 @@ var search = function (_wepy$component) {
 		}, _this.events = {}, _temp), _possibleConstructorReturn(_this, _ret);
 	}
 
-	_createClass(search, [{
+	_createClass(Search, [{
 		key: 'onLoad',
 		value: function onLoad() {}
 	}]);
 
-	return search;
+	return Search;
 }(_wepy2.default.component);
 
-exports.default = search;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIlNlYXJjaC5qcyJdLCJuYW1lcyI6WyJzZWFyY2giLCJkYXRhIiwicHJvcHMiLCJPcGVuU2lkZUxpc3QiLCJ0eXBlIiwiQm9vbGVhbiIsImRlZmF1bHQiLCJjb21wdXRlZCIsIm1ldGhvZHMiLCJvcGVuX3NpZGVfbGlzdCIsIiRlbWl0IiwiY2xpY2tfc2VhcmNoIiwiY29uc29sZSIsImxvZyIsIiRyb290IiwiJG5hdmlnYXRlIiwidXJsIiwiZXZlbnRzIiwiY29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFDQTs7Ozs7Ozs7Ozs7O0lBQ3FCQSxNOzs7Ozs7Ozs7Ozs7OztvTEFDcEJDLEksR0FBTztBQUNOO0FBRE0sRyxRQUdQQyxLLEdBQVE7QUFDUDtBQUNBQyxpQkFBYztBQUNiQyxVQUFNQyxPQURPO0FBRVBDLGFBQVM7QUFGRjtBQUZQLEcsUUFPUkMsUSxHQUFXLEUsUUFHWEMsTyxHQUFVO0FBQ1Q7QUFDQUMsbUJBQWdCLDBCQUFLO0FBQ3BCLFVBQUtOLFlBQUwsR0FBb0IsQ0FBQyxNQUFLQSxZQUExQjtBQUNBLFVBQUtPLEtBQUwsQ0FBVyx3QkFBWCxFQUFxQyxNQUFLUCxZQUExQztBQUNBLElBTFE7QUFNVFEsaUJBQWMsd0JBQU07QUFDbkJDLFlBQVFDLEdBQVIsQ0FBWSxvQkFBWjtBQUNBLFVBQUtDLEtBQUwsQ0FBV0MsU0FBWCxDQUFxQixFQUFDQyxLQUFLLFFBQU4sRUFBckI7QUFDQTtBQVRRLEcsUUFZVkMsTSxHQUFTLEU7Ozs7OzJCQUlBLENBRVI7Ozs7RUFoQ2tDLGVBQUtDLFM7O2tCQUFwQmxCLE0iLCJmaWxlIjoiU2VhcmNoLmpzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbmltcG9ydCB3ZXB5IGZyb20gJ3dlcHknXHJcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIHNlYXJjaCBleHRlbmRzIHdlcHkuY29tcG9uZW50IHtcclxuXHRkYXRhID0ge1xyXG5cdFx0Ly8gY2hlbmxvbmc6ICdjamhlJ1xyXG5cdH1cclxuXHRwcm9wcyA9IHtcclxuXHRcdC8vIOeCueWHu+S+p+i+ueagj+inpuWPkeaMiemSruagh+W/l1xyXG5cdFx0T3BlblNpZGVMaXN0OiB7XHJcblx0XHRcdHR5cGU6IEJvb2xlYW4sXHJcbiAgICAgICAgXHRkZWZhdWx0OiBmYWxzZVxyXG5cdFx0fVxyXG5cdH1cclxuXHRjb21wdXRlZCA9IHtcclxuXHR9XHJcblxyXG5cdG1ldGhvZHMgPSB7XHJcblx0XHQvLyDngrnlh7vkvqfovrnmoI/mjInpkq5cclxuXHRcdG9wZW5fc2lkZV9saXN0OiAoKSA9PntcclxuXHRcdFx0dGhpcy5PcGVuU2lkZUxpc3QgPSAhdGhpcy5PcGVuU2lkZUxpc3RcclxuXHRcdFx0dGhpcy4kZW1pdCgnY2hhbmdlX3NpZGVsaXN0X2J1dHRvbicsIHRoaXMuT3BlblNpZGVMaXN0KTtcclxuXHRcdH0sXHJcblx0XHRjbGlja19zZWFyY2g6ICgpID0+IHtcclxuXHRcdFx0Y29uc29sZS5sb2coJ2NsaWNrIGNsaWNrX3NlYXJjaCcpO1xyXG5cdFx0XHR0aGlzLiRyb290LiRuYXZpZ2F0ZSh7dXJsOiAnc2VhcmNoJ30pO1xyXG5cdFx0fVxyXG5cdH1cclxuXHJcblx0ZXZlbnRzID0ge1xyXG5cclxuXHR9XHJcblxyXG5cdG9uTG9hZCgpIHtcclxuXHRcdFxyXG5cdH1cclxufVxyXG4iXX0=
+exports.default = Search;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIlNlYXJjaC5qcyJdLCJuYW1lcyI6WyJTZWFyY2giLCJkYXRhIiwicHJvcHMiLCJPcGVuU2lkZUxpc3QiLCJ0eXBlIiwiQm9vbGVhbiIsImRlZmF1bHQiLCJTaG93U2VhcmNoQmFjayIsImNvbXB1dGVkIiwibWV0aG9kcyIsIm9wZW5fc2lkZV9saXN0IiwiJGVtaXQiLCJjbGlja19zZWFyY2giLCJjb25zb2xlIiwibG9nIiwiJHJvb3QiLCIkbmF2aWdhdGUiLCJ1cmwiLCJldmVudHMiLCJjb21wb25lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUNBOzs7Ozs7Ozs7Ozs7SUFDcUJBLE07Ozs7Ozs7Ozs7Ozs7O29MQUNwQkMsSSxHQUFPO0FBQ047QUFETSxHLFFBR1BDLEssR0FBUTtBQUNQO0FBQ0FDLGlCQUFjO0FBQ2JDLFVBQU1DLE9BRE87QUFFUEMsYUFBUztBQUZGLElBRlA7QUFNUEMsbUJBQWdCO0FBQ2ZILFVBQU1DLE9BRFM7QUFFZkMsYUFBUztBQUZNO0FBTlQsRyxRQVdSRSxRLEdBQVcsRSxRQUdYQyxPLEdBQVU7QUFDVDtBQUNBQyxtQkFBZ0IsMEJBQUs7QUFDcEIsVUFBS1AsWUFBTCxHQUFvQixDQUFDLE1BQUtBLFlBQTFCO0FBQ0EsVUFBS1EsS0FBTCxDQUFXLHdCQUFYLEVBQXFDLE1BQUtSLFlBQTFDO0FBQ0EsSUFMUTtBQU1UUyxpQkFBYyx3QkFBTTtBQUNuQkMsWUFBUUMsR0FBUixDQUFZLG9CQUFaO0FBQ0EsVUFBS0MsS0FBTCxDQUFXQyxTQUFYLENBQXFCLEVBQUNDLEtBQUssUUFBTixFQUFyQjtBQUNBO0FBVFEsRyxRQVlWQyxNLEdBQVMsRTs7Ozs7MkJBSUEsQ0FFUjs7OztFQXBDa0MsZUFBS0MsUzs7a0JBQXBCbkIsTSIsImZpbGUiOiJTZWFyY2guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuaW1wb3J0IHdlcHkgZnJvbSAnd2VweSdcclxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgU2VhcmNoIGV4dGVuZHMgd2VweS5jb21wb25lbnQge1xyXG5cdGRhdGEgPSB7XHJcblx0XHQvLyBjaGVubG9uZzogJ2NqaGUnXHJcblx0fVxyXG5cdHByb3BzID0ge1xyXG5cdFx0Ly8g54K55Ye75L6n6L655qCP6Kem5Y+R5oyJ6ZKu5qCH5b+XXHJcblx0XHRPcGVuU2lkZUxpc3Q6IHtcclxuXHRcdFx0dHlwZTogQm9vbGVhbixcclxuICAgICAgICBcdGRlZmF1bHQ6IGZhbHNlXHJcblx0XHR9LFxyXG5cdFx0U2hvd1NlYXJjaEJhY2s6IHtcclxuXHRcdFx0dHlwZTogQm9vbGVhbixcclxuXHRcdFx0ZGVmYXVsdDogZmFsc2VcclxuXHRcdH1cclxuXHR9XHJcblx0Y29tcHV0ZWQgPSB7XHJcblx0fVxyXG5cclxuXHRtZXRob2RzID0ge1xyXG5cdFx0Ly8g54K55Ye75L6n6L655qCP5oyJ6ZKuXHJcblx0XHRvcGVuX3NpZGVfbGlzdDogKCkgPT57XHJcblx0XHRcdHRoaXMuT3BlblNpZGVMaXN0ID0gIXRoaXMuT3BlblNpZGVMaXN0XHJcblx0XHRcdHRoaXMuJGVtaXQoJ2NoYW5nZV9zaWRlbGlzdF9idXR0b24nLCB0aGlzLk9wZW5TaWRlTGlzdCk7XHJcblx0XHR9LFxyXG5cdFx0Y2xpY2tfc2VhcmNoOiAoKSA9PiB7XHJcblx0XHRcdGNvbnNvbGUubG9nKCdjbGljayBjbGlja19zZWFyY2gnKTtcclxuXHRcdFx0dGhpcy4kcm9vdC4kbmF2aWdhdGUoe3VybDogJ3NlYXJjaCd9KTtcclxuXHRcdH1cclxuXHR9XHJcblxyXG5cdGV2ZW50cyA9IHtcclxuXHJcblx0fVxyXG5cclxuXHRvbkxvYWQoKSB7XHJcblx0XHRcclxuXHR9XHJcbn1cclxuIl19

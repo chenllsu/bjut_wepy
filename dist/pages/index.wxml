@@ -2,13 +2,13 @@
   <view style="height:100%;">
     <!-- 搜索栏 -->
     
-	<view class="search-wrapper {{$search$show_search_back?'search-wrapper-blue':''}}">
+	<view class="search-wrapper {{$search$ShowSearchBack?'search-wrapper-blue':''}}">
 		<!-- 侧边栏按钮 -->
-		<view class=" iconfont icon-list side-list {{$search$show_search_back?'side-list-white':''}}" bindtap="$search$open_side_list"/>
+		<view class=" iconfont icon-list side-list {{$search$ShowSearchBack?'side-list-white':''}}" bindtap="$search$open_side_list"/>
 		<!-- 搜索框 -->
 		<view class="search-button" bindtap="$search$click_search">
 			<view class="iconfont icon-sousuo"/>
-			搜索活动
+			搜索活动{{$search$ShowSearchBack}}
 		</view>
 	</view>
 
@@ -40,13 +40,17 @@
 		</view>
 	</view>
 
-    <scroll-view scroll-y="true" bindscrolltoupper="reach_top">
+    <scroll-view scroll-y="true" bindscrolltoupper="reach_top" bindscroll="bindscroll">
       
-	<scroll-view scroll-y="true" bindscrolltoupper="$swiper$reach_top">
-		<view class="swiper-wrapper">
-		<div>123</div>
+	<view class="swiper-wrapper">
+		<swiper class="swiper" indicator-dots="true">
+          <block  wx:for="{{$swiper$swiper}}">
+            <swiper-item>
+              <image src="{{item.url}}" mode="aspectFill" class="slide-image" data-actid="{{item.actid}}" bindtap="$swiper$click_activity"/>
+            </swiper-item>
+          </block>
+        </swiper>
 	</view>
-    </scroll-view>
 
     </scroll-view>
   </view>

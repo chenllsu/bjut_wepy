@@ -1,31 +1,38 @@
 <style>
-	.swiper-wrapper {
-		width: 100vw;
-		height: 400vw;
-		margin-top: 50px;
-		background-color: red;
-	}
+.swiper-wrapper {
+	width: 100vw;
+	margin-top: 50px;
+}
+.swiper {
+  width: 100vw;
+  height: 45vw;
+}
+.slide-image {
+  width: 100%;
+  height: 45vw;
+  border-radius: 2px;
+}
 </style>
 
 <template>
-	<scroll-view scroll-y="true" bindscrolltoupper="reach_top">
-		<view class='swiper-wrapper'>
-		<div>123</div>
+	<view class='swiper-wrapper'>
+		<swiper class="swiper" indicator-dots="true">
+          <block wx:for="{{swiper}}">
+            <swiper-item>
+              <image src="{{item.url}}" mode="aspectFill" class="slide-image" data-actid="{{item.actid}}" bindtap="click_activity" />
+            </swiper-item>
+          </block>
+        </swiper>
 	</view>
-    </scroll-view>
 </template>
 
 <script>
-	import wepy from 'wepy'
-	export default class swiper extends wepy.component {
-		data={}
-		methods = {
-			reach_top: () => {
-				console.log('test');
-			}
-		}
-		'reach_top': () => {
-				console.log('test');
-			}
+import wepy from 'wepy'
+export default class swiper extends wepy.component {
+	data={}
+	methods = {
+
 	}
+
+}
 </script>

@@ -1,58 +1,58 @@
 <style>
-.search-wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	padding: 10px 0;
-	width: 100%;
-	z-index: 1;
-	transition: background-color .5s;
-	background-color: white;
-}
-.side-list{
-  display: inline-block;
-  margin: 0 5vw;
-  height: 30px;
-  width: 30px;
-  font-size: 25px;
-  color: #1296db;
-  transition: color .5s;
-}
-.search-button {
-	display: inline-block;
-	margin: 0 auto;
-	height: 30px;
-	width: 70%;
-	border-radius: 5px;
-	background-color: whitesmoke;
-	font-size: 13px;
-	line-height: 30px;
-	text-align: center;
-	vertical-align: top;
-}
-.search-wrapper-blue {
-	background-color: #1296db;
-}
-.side-list-white{
-	color: white;
-}
+	.search-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 10px 0;
+		width: 100%;
+		z-index: 1;
+		transition: background-color .5s;
+		background-color: white;
+	}
+	.side-list{
+	  display: inline-block;
+	  margin: 0 5vw;
+	  height: 30px;
+	  width: 30px;
+	  font-size: 25px;
+	  color: #1296db;
+	  transition: color .5s;
+	}
+	.search-button {
+		display: inline-block;
+		margin: 0 auto;
+		height: 30px;
+		width: 70%;
+		border-radius: 5px;
+		background-color: whitesmoke;
+		font-size: 13px;
+		line-height: 30px;
+		text-align: center;
+		vertical-align: top;
+	}
+	.search-wrapper-blue {
+		background-color: #1296db;
+	}
+	.side-list-white{
+		color: white;
+	}
 </style>
 
 <template>
-	<view class="search-wrapper {{show_search_back?'search-wrapper-blue':''}}">
+	<view class="search-wrapper {{ShowSearchBack?'search-wrapper-blue':''}}">
 		<!-- 侧边栏按钮 -->
-		<view class=" iconfont icon-list side-list {{show_search_back?'side-list-white':''}}" bindtap="open_side_list"></view>
+		<view class=" iconfont icon-list side-list {{ShowSearchBack?'side-list-white':''}}" bindtap="open_side_list"></view>
 		<!-- 搜索框 -->
 		<view class="search-button" bindtap="click_search">
 			<view class="iconfont icon-sousuo"></view>
-			搜索活动
+			搜索活动{{ShowSearchBack}}
 		</view>
 	</view>
 </template>
 
 <script>
 import wepy from 'wepy'
-export default class search extends wepy.component {
+export default class Search extends wepy.component {
 	data = {
 		// chenlong: 'cjhe'
 	}
@@ -61,6 +61,10 @@ export default class search extends wepy.component {
 		OpenSideList: {
 			type: Boolean,
         	default: false
+		},
+		ShowSearchBack: {
+			type: Boolean,
+			default: false
 		}
 	}
 	computed = {

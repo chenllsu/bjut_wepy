@@ -21,17 +21,9 @@ var search = function (_wepy$page) {
 	_inherits(search, _wepy$page);
 
 	function search() {
-		var _ref;
-
-		var _temp, _this, _ret;
-
 		_classCallCheck(this, search);
 
-		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-			args[_key] = arguments[_key];
-		}
-
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = search.__proto__ || Object.getPrototypeOf(search)).call.apply(_ref, [this].concat(args))), _this), _this.data = {}, _temp), _possibleConstructorReturn(_this, _ret);
+		return _possibleConstructorReturn(this, (search.__proto__ || Object.getPrototypeOf(search)).apply(this, arguments));
 	}
 
 	return search;
@@ -40,4 +32,4 @@ var search = function (_wepy$page) {
 
 Page(require('./../npm/wepy/lib/wepy.js').default.$createPage(search , 'pages/search'));
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlYXJjaC5qcyJdLCJuYW1lcyI6WyJzZWFyY2giLCJkYXRhIiwicGFnZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUNDOzs7Ozs7Ozs7Ozs7SUFDcUJBLE07Ozs7Ozs7Ozs7Ozs7O29MQUNwQkMsSSxHQUFPLEU7Ozs7RUFENEIsZUFBS0MsSTs7a0JBQXBCRixNIiwiZmlsZSI6InNlYXJjaC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5cdGltcG9ydCB3ZXB5IGZyb20gJ3dlcHknXHJcblx0ZXhwb3J0IGRlZmF1bHQgY2xhc3Mgc2VhcmNoIGV4dGVuZHMgd2VweS5wYWdlIHtcclxuXHRcdGRhdGEgPSB7fVxyXG5cdH1cclxuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlYXJjaC5qcyJdLCJuYW1lcyI6WyJzZWFyY2giLCJwYWdlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQ0M7Ozs7Ozs7Ozs7OztJQUNxQkEsTTs7Ozs7Ozs7OztFQUFlLGVBQUtDLEk7O2tCQUFwQkQsTSIsImZpbGUiOiJzZWFyY2guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuXHRpbXBvcnQgd2VweSBmcm9tICd3ZXB5J1xyXG5cdGV4cG9ydCBkZWZhdWx0IGNsYXNzIHNlYXJjaCBleHRlbmRzIHdlcHkucGFnZSB7XHJcblx0fVxyXG4iXX0=

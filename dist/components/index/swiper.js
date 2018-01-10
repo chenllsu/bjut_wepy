@@ -31,15 +31,11 @@ var swiper = function (_wepy$component) {
 			args[_key] = arguments[_key];
 		}
 
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = swiper.__proto__ || Object.getPrototypeOf(swiper)).call.apply(_ref, [this].concat(args))), _this), _this.data = {}, _this.methods = {
-			reach_top: function reach_top() {
-				console.log('test');
-			}
-		}, _temp), _possibleConstructorReturn(_this, _ret);
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = swiper.__proto__ || Object.getPrototypeOf(swiper)).call.apply(_ref, [this].concat(args))), _this), _this.data = {}, _this.methods = {}, _temp), _possibleConstructorReturn(_this, _ret);
 	}
 
 	return swiper;
 }(_wepy2.default.component);
 
 exports.default = swiper;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN3aXBlci5qcyJdLCJuYW1lcyI6WyJzd2lwZXIiLCJkYXRhIiwibWV0aG9kcyIsInJlYWNoX3RvcCIsImNvbnNvbGUiLCJsb2ciLCJjb21wb25lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFDQzs7Ozs7Ozs7Ozs7O0lBQ3FCQSxNOzs7Ozs7Ozs7Ozs7OztvTEFDcEJDLEksR0FBSyxFLFFBQ0xDLE8sR0FBVTtBQUNUQyxjQUFXLHFCQUFNO0FBQ2hCQyxZQUFRQyxHQUFSLENBQVksTUFBWjtBQUNBO0FBSFEsRzs7OztFQUZ5QixlQUFLQyxTOztrQkFBcEJOLE0iLCJmaWxlIjoic3dpcGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcblx0aW1wb3J0IHdlcHkgZnJvbSAnd2VweSdcclxuXHRleHBvcnQgZGVmYXVsdCBjbGFzcyBzd2lwZXIgZXh0ZW5kcyB3ZXB5LmNvbXBvbmVudCB7XHJcblx0XHRkYXRhPXt9XHJcblx0XHRtZXRob2RzID0ge1xyXG5cdFx0XHRyZWFjaF90b3A6ICgpID0+IHtcclxuXHRcdFx0XHRjb25zb2xlLmxvZygndGVzdCcpO1xyXG5cdFx0XHR9XHJcblx0XHR9XHJcblx0fVxyXG4iXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN3aXBlci5qcyJdLCJuYW1lcyI6WyJzd2lwZXIiLCJkYXRhIiwibWV0aG9kcyIsImNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUNBOzs7Ozs7Ozs7Ozs7SUFDcUJBLE07Ozs7Ozs7Ozs7Ozs7O29MQUNwQkMsSSxHQUFLLEUsUUFDTEMsTyxHQUFVLEU7Ozs7RUFGeUIsZUFBS0MsUzs7a0JBQXBCSCxNIiwiZmlsZSI6InN3aXBlci5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5pbXBvcnQgd2VweSBmcm9tICd3ZXB5J1xyXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBzd2lwZXIgZXh0ZW5kcyB3ZXB5LmNvbXBvbmVudCB7XHJcblx0ZGF0YT17fVxyXG5cdG1ldGhvZHMgPSB7XHJcblxyXG5cdH1cclxuXHJcbn1cclxuIl19

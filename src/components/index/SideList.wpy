@@ -97,7 +97,6 @@ export default class SideList extends wepy.component {
 			var _this = this;
 			switch(key) {
 				case '1':
-					console.log('this is hahah');
 					_this.OpenSideList = false
 					_this.$emit('close_side_list', 0)
 					break;
@@ -108,7 +107,6 @@ export default class SideList extends wepy.component {
 		}
 	}
 	onLoad(){
-		console.log('asdfhkalsdf');
 	}
 }
 </script>

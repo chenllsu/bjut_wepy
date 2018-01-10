@@ -1,7 +1,14 @@
 
-	.swiper-wrapper {
-		width: 100vw;
-		height: 400vw;
-		margin-top: 50px;
-		background-color: red;
-	}
+.swiper-wrapper {
+	width: 100vw;
+	margin-top: 50px;
+}
+.swiper {
+  width: 100vw;
+  height: 45vw;
+}
+.slide-image {
+  width: 100%;
+  height: 45vw;
+  border-radius: 2px;
+}
