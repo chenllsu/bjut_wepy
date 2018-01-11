@@ -59,9 +59,7 @@ export default class Index extends wepy.page {
       },
       // 监听屏幕滚动
       bindscroll: function (e) {
-        console.log(e.detail.scrollTop)
         if (e.detail.scrollTop > 10) {
-          console.log('hahah')
           this.show_search_back = true
           this.$apply()
         } else {
@@ -85,6 +83,7 @@ export default class Index extends wepy.page {
 
     onLoad() {
       console.log('chenlong make this...')
+      this.$parent.checkFristLogin()
     }
   }
   </script>
